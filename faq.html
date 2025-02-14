@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Bot de Automação para WhatsApp</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #007bff;
+        }
+        .faq-item {
+            border-bottom: 1px solid #ddd;
+            padding: 15px 0;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .question {
+            font-weight: bold;
+            cursor: pointer;
+            color: #0056b3;
+            display: flex;
+            justify-content: space-between;
+        }
+        .answer {
+            display: none;
+            margin-top: 10px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header style="height: 6rem;" class="hero">
+        <nav>
+            <div class="logo">WhatsBot Pro</div>
+            <div class="nav-links">
+                <a href="#beneficios">Benefícios</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#depoimentos">Depoimentos</a>
+                <a href="#planos">Planos</a>
+                <!-- <a href="#contato" class="cta-button">Fale Conosco</a> -->
+                <a href="https://wa.me/5561992343879?text=Olá! Gostaria de saber mais sobre o WhatsBot Pro." target="_blank" >Fale Conosco</a>
+            </div>
+            <button class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+    <section class="testimonials">
+        <div class="container">
+            <h1>Perguntas Frequentes (FAQ)</h1>
+
+            <div class="faq-item">
+                <div class="question">Posso testar o bot antes de comprar? <span>+</span></div>
+                <div class="answer">Sim! Entre em contato para agendar uma demonstração gratuita e ver o bot em ação.</div>
+            </div>
+        
+            <div class="faq-item">
+                <div class="question">O que é o nosso bot de automação para WhatsApp? <span>+</span></div>
+                <div class="answer">Nosso bot automatiza o atendimento no WhatsApp, respondendo mensagens, entendendo áudios, reconhecendo imagens e gerenciando clientes 24h por dia.</div>
+            </div>
+        
+            <div class="faq-item">
+                <div class="question">Como o bot pode ajudar meu negócio? <span>+</span></div>
+                <div class="answer">Ele reduz o tempo de resposta, melhora o atendimento ao cliente, aumenta a conversão de vendas e permite que sua equipe foque em tarefas mais estratégicas.</div>
+            </div>
+        
+            <div class="faq-item">
+                <div class="question">O bot funciona para qualquer tipo de negócio? <span>+</span></div>
+                <div class="answer">Sim! Ele pode ser personalizado para atender lojas, prestadores de serviços, imobiliárias, clínicas, restaurantes e muito mais.</div>
+            </div>
+        
+            <div class="faq-item">
+                <div class="question">Quanto custa o bot? <span>+</span></div>
+                <div class="answer">O preço inicial é a partir de R$297,00, variando conforme as funcionalidades e personalizações desejadas.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="question">Como funciona a personalização do bot? <span>+</span></div>
+                <div class="answer">Além dos fluxos pré-definidos, podemos criar um bot personalizado sob medida, adaptado às necessidades do seu negócio. Entre em contato para saber mais!</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="question">Como faço o pagamento? <span>+</span></div>
+                <div class="answer">Aceitamos Pix, boleto e cartão de crédito via checkout seguro.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="question">Em quanto tempo meu bot estará funcionando? <span>+</span></div>
+                <div class="answer">No caso do nosso bot básico pós a contratação, você já poderá usá-lo, mas caso opte pelo "Sob consulta" será necessário entender suas necessidades para estipular um prazo.</div>
+            </div>
+        
+        </div>
+    </section>
+
+    <script>
+        document.querySelectorAll('.question').forEach(item => {
+            item.addEventListener('click', () => {
+                const answer = item.nextElementSibling;
+                const isVisible = answer.style.display === 'block';
+                
+                document.querySelectorAll('.answer').forEach(ans => ans.style.display = 'none');
+                document.querySelectorAll('.question span').forEach(span => span.textContent = '+');
+                
+                if (!isVisible) {
+                    answer.style.display = 'block';
+                    item.querySelector('span').textContent = '-';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

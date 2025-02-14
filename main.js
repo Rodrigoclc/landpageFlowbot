@@ -28,7 +28,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // WhatsApp Button
 const whatsappButton = document.getElementById('whatsapp-button');
 whatsappButton.addEventListener('click', () => {
-    window.open('https://wa.me/5511999999999?text=Olá! Gostaria de saber mais sobre o WhatsBot Pro.', '_blank');
+    window.open('https://wa.me/5561992343879?text=Olá! Gostaria de saber mais sobre o WhatsBot Pro.', '_blank');
 });
 
 // Intersection Observer for animations
